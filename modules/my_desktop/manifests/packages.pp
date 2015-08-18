@@ -13,11 +13,11 @@ class my_desktop::packages {
       'gparted',
       'inkscape',
       'libreoffice',
-      'network-manager-gnome',
       'numlockx',
       'virt-manager',
       'virt-viewer',
       'vlc',
+      'wicd',
       # Display manager
       'lightdm',
       # X system

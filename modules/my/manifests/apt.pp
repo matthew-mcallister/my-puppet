@@ -37,6 +37,6 @@ class my::apt {
   class { 'apt::backports':
     location => 'http://mirrors.ocf.berkeley.edu/debian/',
     repos => 'main',
-    pin => -10,
+    pin => 10,
   }
 }
