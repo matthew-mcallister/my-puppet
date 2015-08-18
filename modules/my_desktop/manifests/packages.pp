@@ -20,8 +20,8 @@ class my_desktop::packages {
       'vlc',
       # Display manager
       'lightdm',
-      # X.org
-      'xscreensaver',
+      # X system
+      'xbacklight',
       'xserver-xorg',
     ]:
   }
