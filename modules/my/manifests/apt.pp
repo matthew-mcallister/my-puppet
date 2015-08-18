@@ -33,4 +33,10 @@ class my::apt {
         src => true,
       };
   }
+
+  class { 'apt::backports':
+    location => 'http://mirrors.ocf.berkeley.edu/debian/',
+    repos => 'main',
+    pin => -10,
+  }
 }

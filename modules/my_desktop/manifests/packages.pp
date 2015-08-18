@@ -13,7 +13,7 @@ class my_desktop::packages {
       'gparted',
       'inkscape',
       'libreoffice',
-      'network-manager',
+      'network-manager-gnome',
       'numlockx',
       'virt-manager',
       'virt-viewer',
@@ -22,6 +22,7 @@ class my_desktop::packages {
       'lightdm',
       # X system
       'xbacklight',
+      'xclip',
       'xserver-xorg',
     ]:
   }
