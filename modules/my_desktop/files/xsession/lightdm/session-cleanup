@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ -m "$USER" ]; then
+	# Send SIGTERM followed by SIGKILL
+	pkull -u $USER
+	sleep 1
+	pkill -9 -u $USER
+fi

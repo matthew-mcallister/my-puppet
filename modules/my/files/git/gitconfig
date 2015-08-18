@@ -1,0 +1,11 @@
+[branch]
+	autosetuprebase=always
+[rebase]
+	autosquash=true
+	stat=true
+
+[color]
+	ui=true
+
+[push]
+	default=current
