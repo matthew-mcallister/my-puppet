@@ -6,6 +6,8 @@ class my_desktop::packages {
     [
       # User apps
       'banshee',
+      'cups',
+      'djview4',
       'evince-gtk',
       'galculator',
       'geany',

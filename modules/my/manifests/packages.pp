@@ -14,8 +14,6 @@ class my::packages {
 
   package {
     [
-      # These packages are kept up-to-date
-
       # Basic utilities
       'bash',
       'bsdmainutils',
@@ -31,12 +29,12 @@ class my::packages {
       'gzip',
       'mtr',
       'netcat-openbsd',
+      'parted',
       'pigz',
       'powertop',
       'pv',
       'pwgen',
       'quota',
-      'rsnapshot',
       'screen',
       'tar',
       'tcpdump',
@@ -44,11 +42,11 @@ class my::packages {
       'tofrodos',
       'tmux',
       'tree',
+      'udisks',
       'unzip',
       'vim',
       'zip',
       'zsh',
-
       # Important development tools
       'python',
       'python-dev',
