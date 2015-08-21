@@ -10,6 +10,10 @@ File {
   group => root,
 }
 
+Exec {
+  path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+}
+
 # Add managed filesystems to fstab
 Mount {
   ensure => defined,

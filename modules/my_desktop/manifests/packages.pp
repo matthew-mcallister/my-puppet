@@ -4,7 +4,7 @@ class my_desktop::packages {
 
   package {
     [
-      # User apps
+      # User applications
       'banshee',
       'cups',
       'djview4',
@@ -12,8 +12,10 @@ class my_desktop::packages {
       'galculator',
       'geany',
       'gimp',
+      'gnome-terminal',
       'gparted',
       'inkscape',
+      'libnotify-bin',
       'libreoffice',
       'numlockx',
       'virt-manager',

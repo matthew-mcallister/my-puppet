@@ -2,8 +2,20 @@ class my_desktop::xsession {
   require packages
   include xmonad
 
-  file { '/etc/X11/default-display-manager':
-    source => 'puppet:///modules/my_desktop/xsession/default-display-manager',
+  file { '/etc/X11/':
+    ensure => directory,
+    recurse => remote,
+    source => 'puppet:///modules/my_desktop/xsession',
+  }
+
+  file {
+    '/etc/lightdm/':
+      ensure => directory,
+      recurse => remote,
+      source => 'puppet:///modules/my_desktop/lightdm';
+    ['/etc/lightdm/session-setup', '/etc/lightdm/session-cleanup']:
+      mode => '0755',
+      require => File['/etc/lightdm'];
   }
 
   # Place to put e.g. wallpapers
@@ -13,18 +25,5 @@ class my_desktop::xsession {
     '/opt/share/xsession':
       ensure => directory,
       require => File['/opt/share'];
-  }
-
-  file {
-    '/etc/lightdm/lightdm.conf':
-      source => 'puppet:///modules/my_desktop/xsession/lightdm/lightdm.conf';
-    '/etc/lightdm/lightdm-gtk-greeter.conf':
-      source => 'puppet:///modules/my_desktop/xsession/lightdm/lightdm-gtk-greeter.conf';
-    '/etc/lightdm/session-setup':
-      mode => '0755',
-      source => 'puppet:///modules/my_desktop/xsession/lightdm/session-setup';
-    '/etc/lightdm/session-cleanup':
-      mode => '0755',
-      source => 'puppet:///modules/my_desktop/xsession/lightdm/session-cleanup';
   }
 }

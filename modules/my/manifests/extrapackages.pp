@@ -1,6 +1,8 @@
 # This is for (non-graphical) packages that aren't necessary on a
 # server environment but are either helpful or technical tools
 class my::extrapackages {
+  include my::packages
+
   package {
     [
       'autoconf',
@@ -18,6 +20,11 @@ class my::extrapackages {
       'python-pandas',
       'python-scipy',
       'python-yaml',
+      'python3-matplotlib',
+      'python3-numpy',
+      'python3-pandas',
+      'python3-scipy',
+      'python3-yaml',
       'texlive-fonts-recommended',
       'texlive-latex-extra',
       'texlive-latex-recommended',
@@ -27,12 +34,12 @@ class my::extrapackages {
   }
 
   package {
-    [
-      'ipython',
-      'ipython3',
-      'ipython-notebook',
-      'ipython3-notebook',
-    ]:
-      install_options => ['-t', 'jessie-backports'],
+    # Debian is far behind on ipynb
+    'pip:ipython[notebook]':
+      name => 'ipython[notebook]',
+      provider => pip;
+    'pip3:ipython[notebook]':
+      name => 'ipython[notebook]',
+      provider => pip3;
   }
 }

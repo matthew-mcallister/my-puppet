@@ -14,7 +14,7 @@ class my::packages {
 
   package {
     [
-      # Basic utilities
+      'apt-file',
       'bash',
       'bsdmainutils',
       'cpufrequtils',
@@ -47,13 +47,22 @@ class my::packages {
       'vim',
       'zip',
       'zsh',
-      # Important development tools
+    ]:
+  }
+
+  package {
+    [
       'python',
       'python-dev',
-      'python-pip',
+      'python-setuptools',
       'python3',
       'python3-dev',
-      'python3-pip',
+      'python3-setuptools',
     ]:
+  } ->
+  exec {
+    # Update pip to fix Debian bug #744145
+    ['easy_install -U pip', 'easy_install3 -U pip']:
+      refreshonly => true,
   }
 }
