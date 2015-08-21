@@ -8,6 +8,10 @@ class my::apt {
     }
   }
 
+  Apt::Source {
+    pin => 500
+  }
+
   apt::source {
     'debian':
       location => 'http://mirrors.ocf.berkeley.edu/debian/',
@@ -37,6 +41,6 @@ class my::apt {
   class { 'apt::backports':
     location => 'http://mirrors.ocf.berkeley.edu/debian/',
     repos => 'main',
-    pin => 10,
+    pin => 100,
   }
 }

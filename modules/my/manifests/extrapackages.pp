@@ -9,8 +9,6 @@ class my::extrapackages {
       'default-jdk',
       'gdb',
       'haskell-platform',
-      'ipython',
-      'ipython3',
       'irssi',
       'octave',
       'mercurial',
@@ -26,5 +24,15 @@ class my::extrapackages {
       'texlive-publishers',
       'valgrind',
     ]:
+  }
+
+  package {
+    [
+      'ipython',
+      'ipython3',
+      'ipython-notebook',
+      'ipython3-notebook',
+    ]:
+      install_options => ['-t', 'jessie-backports'],
   }
 }

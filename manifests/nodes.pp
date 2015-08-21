@@ -9,6 +9,7 @@ node default {
   include my::git
   include my::ssh
   include my::docker
+  include my::rsnapshot
 
   include my_desktop
 }
