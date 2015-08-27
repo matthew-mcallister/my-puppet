@@ -5,6 +5,7 @@ class my_desktop::packages {
   package {
     [
       # User applications
+      'arandr',
       'banshee',
       'cups',
       'djview4',
@@ -24,6 +25,8 @@ class my_desktop::packages {
       'wicd',
       # Display manager
       'lightdm',
+      # Sound
+      'alsa-utils',
       # X system
       'xbacklight',
       'xclip',

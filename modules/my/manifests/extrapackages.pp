@@ -41,5 +41,12 @@ class my::extrapackages {
     'pip3:ipython[notebook]':
       name => 'ipython[notebook]',
       provider => pip3;
+    # sympy pulls in a bunch of fonts
+    'pip:sympy':
+      name => 'sympy',
+      provider => pip;
+    'pip3:sympy':
+      name => 'sympy',
+      provider => pip3;
   }
 }
