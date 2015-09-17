@@ -9,6 +9,7 @@ class my_desktop::packages {
       'banshee',
       'cups',
       'djview4',
+      'eog',
       'evince-gtk',
       'galculator',
       'geany',
@@ -19,6 +20,7 @@ class my_desktop::packages {
       'libnotify-bin',
       'libreoffice',
       'numlockx',
+      'transmission',
       'virt-manager',
       'virt-viewer',
       'vlc',
@@ -30,7 +32,11 @@ class my_desktop::packages {
       # X system
       'xbacklight',
       'xclip',
+      'xscreensaver',
       'xserver-xorg',
+      # Printing
+      'hplip',
+      'hplip-ppds',
     ]:
   }
 }
