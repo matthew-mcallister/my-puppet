@@ -36,7 +36,7 @@ class my_desktop::packages {
       'xserver-xorg',
       # Printing
       'hplip',
-      'hplip-ppds',
+      'hpijs-ppds',
     ]:
   }
 }
