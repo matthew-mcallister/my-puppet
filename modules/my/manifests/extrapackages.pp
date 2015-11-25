@@ -32,22 +32,4 @@ class my::extrapackages {
       'valgrind',
     ]:
   }
-
-  # See https://projects.puppetlabs.com/issues/1398
-  #package {
-  #  # Debian sympy pulls in a bunch of fonts
-  #  'pip:sympy[all]':
-  #    name => 'sympy[all]',
-  #    provider => pip;
-  #  'pip3:sympy[all]':
-  #    name => 'sympy[all]',
-  #    provider => pip3;
-  #  # Debian is far behind on ipynb
-  #  'pip:ipython[notebook]':
-  #    name => 'ipython[notebook]',
-  #    provider => pip;
-  #  'pip3:ipython[notebook]':
-  #    name => 'ipython[notebook]',
-  #    provider => pip3;
-  #}
 }

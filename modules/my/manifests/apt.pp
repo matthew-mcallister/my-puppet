@@ -5,11 +5,9 @@ class my::apt {
     purge => {
       'sources.list' => true,
       'sources.list.d' => true,
+      'preferences' => true,
+      'preferences.d' => true,
     }
-  }
-
-  Apt::Source {
-    pin => 500
   }
 
   apt::source {
@@ -38,9 +36,8 @@ class my::apt {
       };
   }
 
-  class { 'apt::backports':
+  class { '::apt::backports':
     location => 'http://mirrors.ocf.berkeley.edu/debian/',
     repos => 'main',
-    pin => 100,
   }
 }

@@ -63,7 +63,7 @@ class my::packages {
   } ->
   exec {
     # Update pip to fix Debian bug #744145
-    ['easy_install -U pip', 'easy_install3 -U pip']:
+    ['easy_install3 -U pip', 'easy_install -U pip']:
       refreshonly => true,
   }
 }

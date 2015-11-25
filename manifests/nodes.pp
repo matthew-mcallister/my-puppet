@@ -2,8 +2,10 @@ node default {
   class { 'my::puppet':
     stage => first,
   }
+  class { 'my::apt':
+    stage => first,
+  }
 
-  include my::apt
   include my::packages
   include my::extrapackages
   include my::git
