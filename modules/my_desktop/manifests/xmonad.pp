@@ -5,8 +5,6 @@ class my_desktop::xmonad {
   package {
     [
       'xmonad',
-      'libghc-xmonad-dev',
-      'libghc-xmonad-contrib-dev',
       'xmobar',
       'suckless-tools',
     ]:

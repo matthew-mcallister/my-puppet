@@ -2,6 +2,7 @@
 # server environment but are either helpful or technical tools
 class my::extrapackages {
   include my::packages
+  include my::haskell
 
   package {
     [
@@ -10,7 +11,6 @@ class my::extrapackages {
       'build-essential',
       'default-jdk',
       'gdb',
-      'haskell-platform',
       'irssi',
       'octave',
       'mercurial',
