@@ -7,7 +7,6 @@ class my_desktop::packages {
       # User applications
       'arandr',
       'banshee',
-      'cups',
       'djview4',
       'eog',
       'evince-gtk',
@@ -17,14 +16,16 @@ class my_desktop::packages {
       'gnome-terminal',
       'gparted',
       'inkscape',
-      'libnotify-bin',
       'libreoffice',
-      'numlockx',
       'transmission',
       'virt-manager',
       'virt-viewer',
       'vlc',
       'wicd',
+      # Utils/misc
+      'dunst',
+      'libnotify-bin',
+      'numlockx',
       # Display manager
       'lightdm',
       # Sound
@@ -35,6 +36,7 @@ class my_desktop::packages {
       'xscreensaver',
       'xserver-xorg',
       # Printing
+      'cups',
       'hplip',
       'hpijs-ppds',
     ]:
