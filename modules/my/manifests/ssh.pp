@@ -4,4 +4,8 @@ class my::ssh {
   service { 'ssh':
     require => Package['openssh-server'],
   }
+
+  package { ['sshfs', 'fuse']:
+    require => Package['openssh-client'],
+  }
 }

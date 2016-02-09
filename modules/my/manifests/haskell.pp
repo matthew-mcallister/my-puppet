@@ -4,7 +4,6 @@ class my::haskell {
     [
       'cabal-install',
       'ghc',
-      'ghc-haddock',
     ]:
       install_options => ['-t', 'jessie-backports'],
   }

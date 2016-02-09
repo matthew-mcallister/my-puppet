@@ -1,7 +1,7 @@
 class my_desktop {
   include drivers
+  include network
   include packages
-  include sshfs
   include suspend
   include xsession
 }
