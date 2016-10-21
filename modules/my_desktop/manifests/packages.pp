@@ -23,8 +23,6 @@ class my_desktop::packages {
       'numlockx',
       # Display manager
       'lightdm',
-      # Sound
-      'alsa-utils',
       # X system
       'xbacklight',
       'xclip',
