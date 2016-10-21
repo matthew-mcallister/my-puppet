@@ -3,5 +3,5 @@ Description=Fluidsynth MIDI device daemon
 ConditionPathExists=/usr/share/sounds/sf2/scc1t2.sf2
 
 [Service]
-ExecStart=/usr/bin/fluidsynth --server --no-shell --audio-driver=alsa --reverb=0 --chorus=0 --gain=0.8 /user/share/sounds/sf2/scc1t2.sf2
+ExecStart=/usr/bin/fluidsynth --server --no-shell --audio-driver=alsa --reverb=0 --chorus=0 --gain=0.8 /usr/share/sounds/sf2/scc1t2.sf2
 Restart=on-failure
