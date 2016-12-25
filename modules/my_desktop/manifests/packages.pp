@@ -1,11 +1,10 @@
 class my_desktop::packages {
-  include mozilla
+  include my_desktop::mozilla
 
   package {
     [
       # User applications
       'arandr',
-      'banshee',
       'eog',
       'evince-gtk',
       'galculator',

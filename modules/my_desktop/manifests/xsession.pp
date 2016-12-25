@@ -1,15 +1,14 @@
 class my_desktop::xsession {
-  require packages
-  include xmonad
+  require my_desktop::packages
 
-  file { '/etc/X11/':
+  file { '/etc/X11':
     ensure => directory,
     recurse => remote,
     source => 'puppet:///modules/my_desktop/xsession',
   }
 
   file {
-    '/etc/lightdm/':
+    '/etc/lightdm':
       ensure => directory,
       recurse => remote,
       source => 'puppet:///modules/my_desktop/lightdm';

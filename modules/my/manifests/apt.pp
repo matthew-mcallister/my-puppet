@@ -13,7 +13,7 @@ class my::apt {
   apt::source {
     'debian':
       location => 'https://mirrors.ocf.berkeley.edu/debian/',
-      release => 'jessie',
+      release => 'stretch',
       repos => 'main',
       include => {
         src => true,
@@ -21,7 +21,7 @@ class my::apt {
 
     'debian-security':
       location => 'https://mirrors.ocf.berkeley.edu/debian-security/',
-      release => 'jessie/updates',
+      release => 'stretch/updates',
       repos => 'main',
       include => {
         src => true,
@@ -29,7 +29,7 @@ class my::apt {
 
     'debian-updates':
       location => 'https://mirrors.ocf.berkeley.edu/debian/',
-      release => 'jessie-updates',
+      release => 'stretch-updates',
       repos => 'main',
       include => {
         src => true,
@@ -41,17 +41,13 @@ class my::apt {
     repos => 'main',
   }
 
-  # iceweasel is gone, long live firefox
-  apt::key { 'firefox':
-    id     => '85F06FBC75E067C3F305C3C985A3D26506C4AE2A',
-    source => 'https://mozilla.debian.net/archive.asc',
-  }
-  apt::source { 'firefox':
-      location => 'https://mozilla.debian.net/',
-      release  => 'jessie-backports',
-      repos    => 'firefox-release',
-      include  => {
-        src => true,
-      };
+  # TODO: switch to mozilla.debian.net once stretch is supported
+  apt::source { 'debian-experimental':
+    location => 'https://mirrors.ocf.berkeley.edu/debian/',
+    release  => 'experimental',
+    repos    => 'main',
+    include  => {
+      src => true,
+    },
   }
 }

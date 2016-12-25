@@ -42,7 +42,7 @@ class my::packages {
       'tofrodos',
       'tmux',
       'tree',
-      'udisks',
+      'udisks2',
       'unzip',
       'vim',
       'zip',
@@ -60,10 +60,5 @@ class my::packages {
       'python3-setuptools',
       'virtualenv',
     ]:
-  } ->
-  exec {
-    # Update pip to fix Debian bug #744145
-    ['easy_install3 -U pip', 'easy_install -U pip']:
-      refreshonly => true,
   }
 }

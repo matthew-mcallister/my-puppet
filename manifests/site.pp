@@ -5,7 +5,7 @@ stage { 'first':
 }
 
 File {
-  mode => 0644,
+  mode => '0644',
   owner => root,
   group => root,
 }
