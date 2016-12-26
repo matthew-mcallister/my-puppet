@@ -12,6 +12,7 @@ class my_desktop::packages {
       'gimp',
       'gnome-terminal',
       'gparted',
+      'hexchat',
       'transmission',
       'virt-manager',
       'virt-viewer',
