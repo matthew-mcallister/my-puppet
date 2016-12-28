@@ -36,10 +36,11 @@ class my::apt {
       };
   }
 
-  class { '::apt::backports':
-    location => 'https://mirrors.ocf.berkeley.edu/debian/',
-    repos => 'main',
-  }
+  # TODO: Return backports once stretch is released
+#  class { '::apt::backports':
+#    location => 'https://mirrors.ocf.berkeley.edu/debian/',
+#    repos => 'main',
+#  }
 
   # TODO: switch to mozilla.debian.net once stretch is supported
   apt::source { 'debian-experimental':
